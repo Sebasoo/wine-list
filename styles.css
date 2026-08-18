@@ -109,17 +109,34 @@ body {
 }
 
 .guide {
-  margin: 0.9rem auto 0;
+  margin: 1rem auto 0;
   max-width: 36rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .guide summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
   cursor: pointer;
   list-style: none;
-  font-size: 0.78rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: rgba(244, 236, 230, 0.42);
+  padding: 0.5rem 1.15rem;
+  border: 1px solid rgba(201, 162, 74, 0.55);
+  border-radius: 100px;
+  background: rgba(201, 162, 74, 0.14);
+  color: #edd9a4;
+  font-size: 0.84rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.guide summary:hover {
+  background: rgba(201, 162, 74, 0.24);
+  border-color: var(--gold);
+  color: var(--ink);
 }
 
 .guide summary::-webkit-details-marker {
@@ -127,12 +144,20 @@ body {
 }
 
 .guide summary::after {
-  content: " ▾";
-  color: rgba(201, 162, 74, 0.65);
+  content: "▾";
+  font-size: 0.7rem;
+  color: var(--gold);
+}
+
+.guide[open] summary {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #1a1208;
 }
 
 .guide[open] summary::after {
-  content: " ▴";
+  content: "▴";
+  color: #1a1208;
 }
 
 .guide__body {
@@ -201,6 +226,19 @@ body {
   font-size: 0.84rem;
   line-height: 1.5;
   color: rgba(244, 236, 230, 0.55);
+}
+
+.guide__note a {
+  color: var(--ink);
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(201, 162, 74, 0.55);
+  padding-bottom: 1px;
+}
+
+.guide__note a:hover {
+  color: var(--gold);
+  border-color: var(--gold);
 }
 
 .guide__quote {
