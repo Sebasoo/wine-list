@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Винный вишлист — вместо букета</title>
+  <meta name="description" content="Наш винный вишлист: выбирайте бутылку, звоните в vino&vino и забирайте в магазине." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,300&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ambience" aria-hidden="true">
+    <div class="ambience__glow"></div>
+    <div class="ambience__grain"></div>
+  </div>
+
+  <main class="stage">
+    <header class="stage__head">
+      <p class="eyebrow">Винный вишлист</p>
+      <h1>Вместо букета</h1>
+      <p class="lede">Выберите позицию — позвоните в vino&amp;vino и заберите в ближайшем магазине</p>
+      <div class="chips" id="chips" role="group" aria-label="Фильтр">
+        <button class="chip is-active" type="button" data-filter="all">Всё</button>
+        <button class="chip" type="button" data-filter="red">Красное</button>
+        <button class="chip" type="button" data-filter="white">Белое</button>
+        <button class="chip" type="button" data-filter="sparkling">Игристое</button>
+      </div>
+    </header>
+
+    <section class="showcase" aria-label="Витрина">
+      <div class="showcase__track" id="track" tabindex="0" aria-live="polite"></div>
+
+      <button class="arrow arrow--prev" id="prev" type="button" aria-label="Предыдущее">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4 7 12l8 8" /></svg>
+      </button>
+      <button class="arrow arrow--next" id="next" type="button" aria-label="Следующее">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4l8 8-8 8" /></svg>
+      </button>
+    </section>
+
+    <footer class="stage__meta">
+      <div class="meta" id="meta">
+        <p class="meta__sub" id="meta-sub"></p>
+        <h2 class="meta__name" id="meta-name"></h2>
+        <p class="meta__price" id="meta-price"></p>
+        <p class="meta__note" id="meta-note" hidden></p>
+      </div>
+      <div class="ticks" id="ticks" role="tablist" aria-label="Позиции"></div>
+      <p class="hint">Тяните витрину или листайте стрелками</p>
+    </footer>
+  </main>
+
+  <section class="guide" aria-labelledby="guide-title">
+    <p class="guide__eyebrow">Наш вишлист</p>
+    <h2 id="guide-title">Как пользоваться этим винным вишлистом</h2>
+    <p class="guide__lead">Он создан для вашего удобства и уверенности — чтобы вместо букета можно было спокойно выбрать то, что правда порадует.</p>
+
+    <div class="guide__flow">
+      <p>Посмотрите ближайший магазин <strong>vino&amp;vino</strong> на карте, заранее позвоните, уточните наличие, закажите выбранную позицию и просто заберите её — уже готовой.</p>
+      <p class="guide__actions">
+        <a class="guide__link" href="https://yandex.by/maps/157/minsk/search/Vino%26Vino/" target="_blank" rel="noopener noreferrer">Магазины на карте</a>
+        <a class="guide__link" href="https://vinovino.by/our-stores" target="_blank" rel="noopener noreferrer">Адреса на vinovino.by</a>
+      </p>
+      <p>Если по телефону сказали, что доставить выбранное вино в ваш магазин нельзя — напишите менеджеру в Telegram с пометкой:</p>
+      <blockquote class="guide__quote">
+        «Мы идём на свадьбу к Вере, нам нужна вот такая позиция в магазин по адресу ***»
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="strip">
+    <p class="strip__text">Винный вишлист · забрать в vino&amp;vino</p>
+    <div class="strip__links">
+      <a href="https://yandex.by/maps/157/minsk/search/Vino%26Vino/" target="_blank" rel="noopener noreferrer">Магазины на карте</a>
+      <a href="https://vinovino.by/our-stores" target="_blank" rel="noopener noreferrer">vinovino.by</a>
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
