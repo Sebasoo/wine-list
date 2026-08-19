@@ -112,7 +112,8 @@ const WINES = [
   {
     id: "antinori-donna-cora",
     name: "Marchese Antinori Donna Cora Satèn",
-    sub: "Игристое · Franciacorta · Magnum 1,5 л",
+    sub: "Игристое · Franciacorta",
+    badge: "Magnum · 1,5 л",
     price: 255,
     type: "sparkling",
     image: "images/antinori-donna-cora.png?v=5",
@@ -282,6 +283,7 @@ const ticks = document.getElementById("ticks");
 const chips = document.getElementById("chips");
 const metaName = document.getElementById("meta-name");
 const metaSub = document.getElementById("meta-sub");
+const metaBadge = document.getElementById("meta-badge");
 const metaPrice = document.getElementById("meta-price");
 const meta = document.getElementById("meta");
 const glow = document.querySelector(".ambience__glow");
@@ -372,6 +374,10 @@ function update() {
 
   metaName.textContent = item.name;
   metaSub.textContent = item.sub;
+  if (metaBadge) {
+    metaBadge.textContent = item.badge || "";
+    metaBadge.hidden = !item.badge;
+  }
   metaPrice.innerHTML = item.price == null ? "—" : `${item.price} <span>BYN</span>`;
   const noteEl = document.getElementById("meta-note");
   if (noteEl) {

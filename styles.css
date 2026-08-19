@@ -446,12 +446,17 @@ body {
 
 .meta.is-in .meta__sub,
 .meta.is-in .meta__name,
+.meta.is-in .meta__badge,
 .meta.is-in .meta__price {
   animation: meta-in 0.65s var(--ease) both;
 }
 
 .meta.is-in .meta__name {
   animation-delay: 0.05s;
+}
+
+.meta.is-in .meta__badge {
+  animation-delay: 0.08s;
 }
 
 .meta.is-in .meta__price {
@@ -473,6 +478,20 @@ body {
   font-size: clamp(1.25rem, 3.4vw, 1.9rem);
   font-weight: 500;
   line-height: 1.15;
+}
+
+.meta__badge {
+  display: inline-block;
+  margin: 0.55rem 0 0;
+  padding: 0.35rem 0.85rem;
+  border: 1px solid rgba(201, 162, 74, 0.65);
+  border-radius: 100px;
+  background: rgba(201, 162, 74, 0.18);
+  color: var(--gold);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .meta__price {
