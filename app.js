@@ -14,7 +14,7 @@ const WINES = [
     sub: "Красное · Vigneti delle Dolomiti · 0,75 л",
     price: 59,
     type: "red",
-    image: "images/franz-haas-sofi.png?v=5",
+    image: "images/franz-haas-sofi.png?v=7",
     glow: "#7a2438",
   },
   {
